@@ -1,8 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: OCIRepository
 metadata:
-  name: jetstack
-  namespace: cert-manager
+  name: capacitor
+  namespace: flux-system
 spec:
   interval: 120m0s
-  url: https://charts.jetstack.io
+  url: oci://ghcr.io/gimlet-io/capacitor-manifests
+  ref:
+    semver: ">=0.1.0"
