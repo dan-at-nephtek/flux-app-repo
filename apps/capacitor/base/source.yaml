@@ -1,8 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: OCIRepository
 metadata:
-  name: cnpg
-  namespace: cnpg-system
+  name: capacitor
+  namespace: flux-system
 spec:
   interval: 120m0s
-  url: https://cloudnative-pg.github.io/charts
+  url: oci://ghcr.io/gimlet-io/capacitor-manifests
+  ref:
+    semver: ">=0.1.0"
