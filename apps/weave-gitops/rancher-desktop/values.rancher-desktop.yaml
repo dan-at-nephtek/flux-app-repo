@@ -1,0 +1,17 @@
+resources:
+  limits:
+    memory: 128Mi
+  requests:
+    memory: 128Mi
+    cpu: 100m
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: weave.k8s.nephtek.com
+  annotations:
+    cert-manager.io/cluster-issuer: nephtek-com-issuer
+  tls:
+    - secretName: weave-gitops-cert
+      hosts:
+        - weave.k8s.nephtek.com
