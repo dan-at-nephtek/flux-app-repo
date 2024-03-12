@@ -1,0 +1,11 @@
+resources:
+  limits:
+    memory: 64Mi
+  requests:
+    cpu: 10m
+    memory: 32Mi
+prometheus:
+  monitor:
+    enabled: true
+    additionalLabels:
+      release: kube-prometheus-stack
