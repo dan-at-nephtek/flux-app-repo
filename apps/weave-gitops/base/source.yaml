@@ -7,3 +7,4 @@ metadata:
 spec:
   interval: 120m0s
   url: https://helm.gitops.weave.works
+#test
