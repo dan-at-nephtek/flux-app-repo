@@ -9,5 +9,6 @@ configMapGenerator:
       - values.rancher-desktop.yaml
 resources:
   - ../base
+  - clusterissuer.yaml
 patches:
   - path: patch-helm-release.yaml
