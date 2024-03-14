@@ -18,7 +18,7 @@ prometheus:
     replicas: 1
     resources:
       requests:
-        memory: 520Mi
+        memory: 2000Mi
         cpu: 250m
   ingress:
     enabled: true
@@ -72,3 +72,12 @@ grafana:
       - secretName: grafana-k8s-nephtek-com-cert
         hosts:
           - grafana.k8s.nephtek.com
+
+alertmanager:
+  alertmanagerSpec:
+    resources:
+      requests:
+        cpu: 10m
+        memory: 80Mi
+      limits:
+        memory: 160Mi
