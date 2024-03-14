@@ -20,12 +20,14 @@ controller:
   service:
     externalTrafficPolicy: Local
     type: LoadBalancer
+  networkPolicy:
+    enabled: true
 defaultBackend:
   enabled: true
   resources:
     limits:
       cpu: 10m
-      memory: 20Mi
+      memory: 25Mi
     requests:
       cpu: 10m
-      memory: 20Mi
+      memory: 25Mi

@@ -10,6 +10,8 @@ kubeProxy:
   enabled: false
 kubeControllerManager:
   enabled: false
+kubeEtcd:
+  enabled: false
 
 prometheus:
   prometheusSpec:
@@ -29,7 +31,6 @@ prometheus:
       - secretName: prometheus-k8s-nephtek-com-cert
         hosts:
           - prometheus.k8s.nephtek.com
-
 
 grafana:
   additionalDataSources:
