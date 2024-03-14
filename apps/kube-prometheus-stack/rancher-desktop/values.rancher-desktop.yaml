@@ -32,6 +32,15 @@ prometheus:
         hosts:
           - prometheus.k8s.nephtek.com
 
+prometheusOperator:
+  prometheusConfigReloader:
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+      limits:
+        memory: 50Mi
+
 grafana:
   additionalDataSources:
     - name: Loki
