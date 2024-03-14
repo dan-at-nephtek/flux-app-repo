@@ -6,3 +6,9 @@ podDnsConfig:
   nameservers:
     - 8.8.8.8
 podDnsPolicy: None
+resources:
+  requests:
+    cpu: 10m
+    memory: 50Mi
+  limits:
+    memory: 75Mi
