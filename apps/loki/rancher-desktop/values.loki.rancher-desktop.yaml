@@ -6,6 +6,12 @@ loki:
     type: 'filesystem'
 singleBinary:
   replicas: 1
+  resources:
+    requests:
+      cpu: 10m
+      memory: 375Mi
+    limits:
+      memory: 750Mi
 monitoring:
   serviceMonitor:
     labels:
