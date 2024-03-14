@@ -14,6 +14,8 @@ kubeEtcd:
   enabled: false
 
 prometheus:
+  networkPolicy:
+    enabled: true
   prometheusSpec:
     replicas: 1
     resources:
@@ -33,6 +35,8 @@ prometheus:
           - prometheus.k8s.nephtek.com
 
 prometheusOperator:
+  networkPolicy:
+    enabled: true
   prometheusConfigReloader:
     resources:
       requests:
