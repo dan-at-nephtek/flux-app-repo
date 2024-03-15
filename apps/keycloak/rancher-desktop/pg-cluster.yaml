@@ -1,0 +1,24 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg-keycloak
+spec:
+  instances: 1
+  storage:
+    size: 8Gi
+  affinity:
+    topologyKey: topology.kubernetes.io/zone
+  priorityClassName:
+  primaryUpdateMethod: switchover
+  primaryUpdateStrategy: unsupervised
+  logLevel: info
+  enableSuperuserAccess: true
+  superuserSecret:
+  postgresql:
+    shared_preload_libraries:
+  monitoring:
+    enablePodMonitor: false
+  bootstrap:
+    initdb:
+      postInitApplicationSQL:
+  backup:

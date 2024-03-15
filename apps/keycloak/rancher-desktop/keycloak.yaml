@@ -1,0 +1,21 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  name: example-kc
+spec:
+  instances: 1
+  db:
+    vendor: postgres
+    host: pg-keycloak-rw
+    usernameSecret:
+      name: pg-keycloak-app
+      key: username
+    passwordSecret:
+      name: pg-keycloak-app
+      key: password
+  http:
+    httpEnabled: true
+  hostname:
+    hostname: keycloak.k8s.nephtek.com
+  proxy:
+    headers: xforwarded # double check your reverse proxy sets and overwrites the X-Forwarded-* headers
