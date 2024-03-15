@@ -4,6 +4,9 @@ metadata:
   name: pg-keycloak
 spec:
   instances: 1
+  bootstrap:
+    initdb:
+      database: keycloak
   storage:
     size: 8Gi
   affinity:
@@ -18,7 +21,4 @@ spec:
     shared_preload_libraries:
   monitoring:
     enablePodMonitor: false
-  bootstrap:
-    initdb:
-      postInitApplicationSQL:
   backup:
