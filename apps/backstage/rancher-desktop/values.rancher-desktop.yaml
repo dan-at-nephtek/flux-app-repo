@@ -1,0 +1,35 @@
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: nephtek-com-issuer
+  host: backstage.k8s.nephtek.com
+  tls:
+    enabled: true
+    secretName: backstage-tls-cert
+backstage:
+  resources:
+    limits:
+      memory: 1Gi
+    requests:
+      memory: 250Mi
+      cpu: 100m
+networkPolicy:
+  enabled: true
+  ingressRules:
+    namespaceSelector:
+      app: ingress-nginx
+postgresql:
+  auth:
+    username: bn_backstage
+    existingSecret: pg-backstage-app
+    secretKeys:
+      userPasswordKey: password
+serviceAccount:
+  create: true
+  automountServiceAccountToken: false
+metrics:
+  serviceMonitor:
+    enabled: true
+    labels:
+      release: kube-prometheus-stack
