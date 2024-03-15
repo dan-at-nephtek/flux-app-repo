@@ -1,0 +1,10 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: kube-bench
+  namespace: kube-bench
+spec:
+  valuesFrom:
+    - kind: ConfigMap
+      name: values-kube-bench-rancher-desktop
+      valuesKey: values.rancher-desktop.yaml

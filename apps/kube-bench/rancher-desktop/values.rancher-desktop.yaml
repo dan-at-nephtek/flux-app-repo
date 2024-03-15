@@ -1,0 +1,8 @@
+serviceAccount:
+  create: true
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsUser: 1000
