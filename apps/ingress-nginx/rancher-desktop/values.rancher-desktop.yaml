@@ -31,3 +31,9 @@ defaultBackend:
     requests:
       cpu: 10m
       memory: 25Mi
+  networkPolicy:
+    enabled: true
+admissionWebhooks:
+  patch:
+    networkPolicy:
+      enabled: true
