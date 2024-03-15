@@ -4,6 +4,11 @@ metadata:
   name: example-kc
 spec:
   instances: 1
+  ingress:
+    enabled: true
+    className: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: nephtek-com-issuer
   db:
     vendor: postgres
     host: pg-keycloak-rw
