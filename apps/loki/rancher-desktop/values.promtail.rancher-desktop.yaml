@@ -1,9 +1,9 @@
 resources:
   limits:
-    memory: 128Mi
+    memory: 14Mi
   requests:
     cpu: 100m
-    memory: 128Mi
+    memory: 140Mi
 config:
   clients:
     - url: http://loki-gateway/loki/api/v1/push
