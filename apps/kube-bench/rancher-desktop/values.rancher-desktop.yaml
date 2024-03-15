@@ -6,3 +6,9 @@ securityContext:
       - ALL
   readOnlyRootFilesystem: true
   runAsUser: 1000
+resources:
+  requests:
+    cpu: 10m
+    memory: 500Mi
+  limits:
+    memory: 500Mi
