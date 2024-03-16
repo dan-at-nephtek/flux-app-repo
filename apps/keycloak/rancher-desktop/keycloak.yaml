@@ -5,10 +5,8 @@ metadata:
 spec:
   instances: 1
   ingress:
-    enabled: true
+    enabled: false
     className: nginx
-    annotations:
-      cert-manager.io/cluster-issuer: nephtek-com-issuer
   db:
     vendor: postgres
     host: pg-keycloak-rw
@@ -21,6 +19,15 @@ spec:
   http:
     httpEnabled: true
   hostname:
+    strict: false
     hostname: keycloak.k8s.nephtek.com
   proxy:
     headers: xforwarded # double check your reverse proxy sets and overwrites the X-Forwarded-* headers
+  unsupported:
+    podTemplate:
+      spec:
+        containers:
+        - name: keycloak
+          env:
+          - name: KC_HOSTNAME_STRICT_HTTPS
+            value: "false"
