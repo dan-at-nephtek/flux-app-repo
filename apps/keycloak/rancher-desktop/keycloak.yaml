@@ -7,9 +7,9 @@ spec:
   resources:
     requests:
       cpu: 10m
-      memory: 175Mi
-    limits:
       memory: 512Mi
+    limits:
+      memory: 1024Mi
   ingress:
     enabled: false
     className: nginx
