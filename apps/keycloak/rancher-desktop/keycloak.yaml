@@ -4,6 +4,12 @@ metadata:
   name: example-kc
 spec:
   instances: 1
+  resources:
+    requests:
+      cpu: 10m
+      memory: 175Mi
+    limits:
+      memory: 512Mi
   ingress:
     enabled: false
     className: nginx
