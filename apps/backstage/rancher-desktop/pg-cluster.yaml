@@ -4,6 +4,12 @@ metadata:
   name: pg-backstage
 spec:
   instances: 1
+  resources:
+    requests:
+      cpu: 10m
+      memory: 125Mi
+    limits:
+      memory: 512Mi
   storage:
     size: 8Gi
   affinity:

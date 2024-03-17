@@ -4,6 +4,12 @@ metadata:
   name: pg-keycloak
 spec:
   instances: 1
+  resources:
+    requests:
+      cpu: 10m
+      memory: 175Mi
+    limits:
+      memory: 512Mi
   bootstrap:
     initdb:
       database: keycloak
