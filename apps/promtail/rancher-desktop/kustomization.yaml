@@ -4,10 +4,10 @@ namespace: logging
 generatorOptions:
   disableNameSuffixHash: true
 configMapGenerator:
-  - name: values-loki-rancher-desktop
+  - name: values-promtail-rancher-desktop
     files:
-      - values.loki.rancher-desktop.yaml
+      - values.promtail.rancher-desktop.yaml
 resources:
   - ../base
 patches:
-  - path: patch-loki-helm-release.yaml
+  - path: patch-promtail-helm-release.yaml
