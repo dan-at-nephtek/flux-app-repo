@@ -1,6 +1,6 @@
 persistence:
   enabled: true
-  storageClassName: local-path
+  storageClassName: hostpath
 tempo:
   resources:
     requests:
