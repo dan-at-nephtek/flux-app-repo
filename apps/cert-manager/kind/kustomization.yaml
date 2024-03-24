@@ -6,7 +6,7 @@ generatorOptions:
 configMapGenerator:
   - name: values-cert-manager-kind
     files:
-      - values.docker-desktop.yaml
+      - values.kind.yaml
 resources:
   - ../base
 patches:
