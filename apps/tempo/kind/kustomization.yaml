@@ -4,9 +4,9 @@ namespace: tempo
 generatorOptions:
   disableNameSuffixHash: true
 configMapGenerator:
-  - name: values-tempo-docker-desktop
+  - name: values-tempo-kind
     files:
-      - values.docker-desktop.yaml
+      - values.kind.yaml
 resources:
   - ../base
 patches:

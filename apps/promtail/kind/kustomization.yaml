@@ -1,13 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: tempo
+namespace: logging
 generatorOptions:
   disableNameSuffixHash: true
 configMapGenerator:
-  - name: values-tempo-docker-desktop
+  - name: values-promtail-kind
     files:
-      - values.docker-desktop.yaml
+      - values.promtail.kind.yaml
 resources:
   - ../base
 patches:
-  - path: patch-helm-release.yaml
+  - path: patch-promtail-helm-release.yaml

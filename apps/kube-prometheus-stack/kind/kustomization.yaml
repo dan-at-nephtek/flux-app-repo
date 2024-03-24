@@ -1,12 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: tempo
+namespace: monitoring
 generatorOptions:
   disableNameSuffixHash: true
 configMapGenerator:
-  - name: values-tempo-docker-desktop
+  - name: values-kube-prometheus-stack-kind
     files:
-      - values.docker-desktop.yaml
+      - values.kind.yaml
 resources:
   - ../base
 patches:
