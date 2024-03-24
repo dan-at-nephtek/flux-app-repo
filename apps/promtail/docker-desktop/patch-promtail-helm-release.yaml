@@ -1,0 +1,10 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: promtail
+  namespace: logging
+spec:
+  valuesFrom:
+    - kind: ConfigMap
+      name: values-promtail-docker-desktop
+      valuesKey: values.promtail.docker-desktop.yaml
