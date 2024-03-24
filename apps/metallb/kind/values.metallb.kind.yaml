@@ -1,4 +1,5 @@
 prometheus:
+  serviceAccount: kube-prometheus-stack-prometheus
   podMonitor:
     enabled: true
     additionalLabels:
