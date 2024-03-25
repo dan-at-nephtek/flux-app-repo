@@ -18,8 +18,10 @@ controller:
       cpu: 10m
       memory: 200Mi
   service:
-    externalTrafficPolicy: Local
-    type: LoadBalancer
+    type: NodePort
+    nodePorts:
+      http: 30080
+      https: 30443
   networkPolicy:
     enabled: true
 defaultBackend:
