@@ -19,6 +19,9 @@ controller:
       memory: 200Mi
   service:
     type: NodePort
+    nodePorts:
+      http: 30080
+      https: 30443
   networkPolicy:
     enabled: true
 defaultBackend:
