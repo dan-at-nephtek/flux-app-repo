@@ -1,0 +1,11 @@
+manager:
+  serviceMonitor:
+    enabled: true
+    extraLabels:
+      release: kube-prometheus-stack
+  prometheusRule:
+    enabled: true
+    defaultRules:
+      enabled: true
+    extraLabels:
+      release: kube-prometheus-stack
