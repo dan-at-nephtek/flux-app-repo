@@ -1,0 +1,10 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: opentelemetry-operator
+  namespace: opentelemetry
+spec:
+  valuesFrom:
+    - kind: ConfigMap
+      name: values-opentelemetry-rancher-desktop
+      valuesKey: values.rancher-desktop.yaml
