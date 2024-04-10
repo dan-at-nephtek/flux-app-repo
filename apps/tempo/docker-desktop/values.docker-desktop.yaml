@@ -9,6 +9,8 @@ tempo:
     limits:
       memory: 200Mi
 tempoQuery:
+  service:
+    port: 4318
   ingress:
     annotations:
       cert-manager.io/cluster-issuer: nephtek-com-issuer
