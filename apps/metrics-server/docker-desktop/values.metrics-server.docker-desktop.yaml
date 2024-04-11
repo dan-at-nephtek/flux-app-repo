@@ -1,0 +1,7 @@
+metrics:
+  enabled: true
+
+serviceMonitoring:
+  enabled: true
+  additionalLabels:
+    release: kube-prometheus-stack

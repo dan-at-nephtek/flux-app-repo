@@ -1,0 +1,10 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: metrics-server
+  namespace: monitoring
+spec:
+  valuesFrom:
+    - kind: ConfigMap
+      name: values-metrics-server-docker-desktop
+      valuesKey: values.metrics-server.docker-desktop.yaml
