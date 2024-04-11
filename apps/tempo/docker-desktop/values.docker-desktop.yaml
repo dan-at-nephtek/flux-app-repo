@@ -5,9 +5,9 @@ tempo:
   resources:
     requests:
       cpu: 10m
-      memory: 500Mi
-    limits:
       memory: 1000Mi
+    limits:
+      memory: 2000Mi
 tempoQuery:
   service:
     port: 4318
