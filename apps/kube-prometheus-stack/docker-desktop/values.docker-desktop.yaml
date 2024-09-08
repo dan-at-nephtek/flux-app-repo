@@ -22,7 +22,8 @@ prometheus:
           - prometheus.k8s.nephtek.com
 
 prometheus-node-exporter:
-  hostRootFsMount: false
+  hostRootFsMount: 
+    enabled: false
 
 prometheusOperator:
   networkPolicy:
