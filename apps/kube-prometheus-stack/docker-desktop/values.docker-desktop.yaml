@@ -21,6 +21,9 @@ prometheus:
         hosts:
           - prometheus.k8s.nephtek.com
 
+prometheus-node-exporter:
+  hostRootFsMount: false
+
 prometheusOperator:
   networkPolicy:
     enabled: true
