@@ -13,4 +13,4 @@ serviceMonitor:
   labels:
     release: kube-prometheus-stack
 networkPolicy:
-  enabled: true
+  enabled: false
