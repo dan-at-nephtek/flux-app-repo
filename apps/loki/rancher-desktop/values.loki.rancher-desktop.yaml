@@ -17,7 +17,7 @@ monitoring:
     labels:
       release: kube-prometheus-stack
 networkPolicy:
-  enabled: true
+  enabled: false
 rbac:
   pspEnabled: false
 ingress:
