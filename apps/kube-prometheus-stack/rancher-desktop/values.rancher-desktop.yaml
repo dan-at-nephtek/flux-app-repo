@@ -15,7 +15,7 @@ kubeEtcd:
 
 prometheus:
   networkPolicy:
-    enabled: true
+    enabled: false
   prometheusSpec:
     replicas: 1
     resources:
@@ -38,7 +38,7 @@ prometheus:
 
 prometheusOperator:
   networkPolicy:
-    enabled: true
+    enabled: false
   prometheusConfigReloader:
     resources:
       requests:
