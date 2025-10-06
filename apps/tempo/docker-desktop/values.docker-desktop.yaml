@@ -9,6 +9,7 @@ tempo:
     limits:
       memory: 2000Mi
 tempoQuery:
+  enabled: true
   service:
     port: 4318
   ingress:
